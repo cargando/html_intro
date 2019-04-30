@@ -3,10 +3,18 @@ img {
 	border-radius: 15px;
 }
 
-#my_paragraph{
+img[height="200"] {
+	border: 1px dashed blue;
+	border-radius: 80%;
+}
+
+#my_paragraph {
 	color: YELLOW;
 }
 
+#my_paragraph > img {
+	border: 1px dashed #ff0000;
+}
 
 
 .micalendar {
