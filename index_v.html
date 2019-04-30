@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Claim Prototype</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+    <br/><br/>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Claim Prototype</h3>
+            </div>
+        </div><!-- end of row -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card" style="width: 100%;">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="claimData">Claim name</label>
+                            <input type="text" class="form-control" id="claimData" aria-describedby="claimDataHelp"
+                                   placeholder="Claim">
+                            <small id="claimDataHelp" class="form-text text-muted">Enter claim name.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="claimClient">Claim client</label>
+                            <input type="text" class="form-control" id="claimClient" aria-describedby="claimClientHelp"
+                                   placeholder="Client">
+                            <small id="claimClientHelp" class="form-text text-muted">Choose client.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="claimDate">Claim Date</label>
+                            <div class="row">
+                                <div class="col-md-11">
+                                    <input type="text" class="form-control" id="claimDate" aria-describedby="reminderDateHelp"
+                                           placeholder="Date and Time">
+                                    <!--<input type="date" id="party" name="party" min="2017-04-01" max="2017-04-20" required>-->
+                                    <!--<span class="validity"></span>-->
+                                    <small id="reminderDateHelp" class="form-text text-muted">Enter date and time.
+                                    </small>
+                                </div>
+                                <div class="col-xs-1">
+                                    <a href="#" class="btn btn-light"><i class="fa fa-calendar"></i></a>
+                                </div>
+                            </div>
+                            <br/>
+                            <a href="#" class="btn btn-primary" onclick="saveData()">Add claim</a>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end of col-md-6 -->
+            <div class="col-md-6">
+                <div class="card" style="width: 100%;">
+                    <div class="card-body">
+                        <h4 class="card-title">Claim list:</h4>
+                        <ul class="list-group" id="claimList">
+                            <li class="list-group-item">Banking claim.</li>
+                        </ul>
+                        <br/>
+                        <a href="#" class="btn btn-primary" onclick="myFunction()">Go somewhere</a>
+                    </div>
+                </div>
+            </div><!-- end of col-md-6 -->
+        </div> <!-- end of row -->
+    </div>
+    <script src="/js/fn.js"></script>
+</body>
+</html>

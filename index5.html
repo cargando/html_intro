@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Ellow Menu</title>
+    <link rel="stylesheet" href="/css/style1.css">
+</head>
+<body>
+  <nav class="menu-opener">
+    <div class="menu-opener-inner"></div>
+  </nav>
+  <nav class="menu">
+    <ul class="menu-inner">
+      <a href="#" class="menu-link">
+        <li>Я</li>
+      </a>
+      <a href="#" class="menu-link">
+        <li>Портфолио</li>
+      </a>
+      <a href="#" class="menu-link">
+        <li>Увлечения</li>
+      </a>
+      <a href="#" class="menu-link">
+        <li>Друзья</li>
+      </a>
+      <a href="#" class="menu-link">
+        <li>Контакты</li>
+      </a>
+      <a href="#" class="menu-link">
+        <li>Контакты</li>
+      </a>
+      <a href="#" class="menu-link">
+        <li>Контакты</li>
+      </a>
+      <a href="#" class="menu-link">
+        <li>Контакты</li>
+      </a>
+    </ul>
+  </nav>
+
+<script>
+function toggle() {
+    if (document.querySelector(".menu-opener").classList.contains('active')) {
+        document.querySelector(".menu-opener-inner").classList.remove("active");
+        document.querySelector(".menu-opener").classList.remove("active");
+        document.querySelector(".menu").classList.remove("active");        
+    } else {
+        document.querySelector(".menu-opener-inner").classList.add("active");
+        document.querySelector(".menu-opener").classList.add("active");
+        document.querySelector(".menu").classList.add("active");        
+    }//*/
+}
+    document.querySelector('.menu-opener').onclick = toggle;
+    // $(".menu-opener, .menu-opener-inner, .menu").toggleClass("active");
+</script
+</body>
+</html>
