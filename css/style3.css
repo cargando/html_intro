@@ -5,7 +5,7 @@ img {
 
 img[height="200"] {
 	border: 1px dashed blue;
-	border-radius: 80%;
+	border-radius: 50%;
 }
 
 #my_paragraph {
@@ -16,11 +16,16 @@ img[height="200"] {
 	border: 1px dashed #ff0000;
 }
 
+.micalendar2 tr:nth-child(odd) {
+	background-color: #00FF00 !important;;
+}
 
+.micalendar2 tr:nth-child(even) {
+	background-color: #005cbf !important;
+}
 .micalendar {
   background-color: #fff;
-  width: 420px;
-  height: 480px;
+  width: 50%;
   position: absolute;
   box-shadow: 0 0 7px rgba(0,0,0,0.5);
   border-radius: 5px;
