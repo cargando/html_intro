@@ -44,3 +44,77 @@ body {
 	height: 5px;
 	border-top: 1px solid #5e5e5e;
 }
+
+.restaurant_logo_block {
+	display: block;
+	width: 1200px;
+	padding-top: 30px;
+	padding-bottom: 60px;
+}
+.restaurant_logo_wrapper {
+	padding-left: 30px;
+	padding-right: 30px;
+	text-align: center;
+	vertical-align: middle;
+	/*position:relative;*/
+}
+/*
+.restaurant_logo_wrapper:before {
+	content: "";
+	background-image: url("/img/arrow_left.png");
+	width: 18px;
+	height: 32px;
+	left: 10px;
+	top: 30px;
+	position: absolute;
+	z-index: 1;
+	margin: 0px;
+}
+.restaurant_logo_wrapper:after {
+	content: "";
+	background-image: url("/img/arrow_right.png");
+	width: 18px;
+	height: 32px;
+	right: 10px;
+	top: 10px;
+	position: absolute;
+	z-index: 1;
+}
+*/
+.restaurant_logo {
+	display: inline-block;
+	box-sizing: border-box;
+	width: 95px;
+	height: 95px;
+	margin-left: 8px;
+	margin-right: 8px;
+}
+.restaurant_arrow {
+	display: inline-block;
+	box-sizing: border-box;
+	width: 16px;
+	height: 16px;
+	margin-right: 8px;
+	vertical-align: middle;
+}
+
+@media screen and (min-width: 720px) {
+	.box_media1 {
+		background-color: #5a6268;
+		width: 200px;
+		height: 130px;
+		display: inline-block;
+		padding: 10px;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.box_media1 {
+		background-color: #5a6268;
+		width: 100px;
+		height: 130px;
+		border: 1px solid #ff0000;
+		display: inline-block;
+		padding: 10px;
+	}
+}
