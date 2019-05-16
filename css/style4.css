@@ -1,7 +1,34 @@
 
+.flex-container {
+	display: flex;
+	flex-direction: row-reverse;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+
+.flex_child {
+	padding: 10px;
+
+	height: 70px;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+
+
+@font-face {
+	font-face-name: "My_font1";
+	src: url(".ttf"),
+		url(".woff");
+	font-weight: bold;
+	font-style: italic;
+	font-size: 14px;
+
+}
+
 * {
 	box-sizing: border-box;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'My_font1', 'Roboto', sans-serif;
 }
 body {
 	background-color: #f7f7f7;
@@ -98,13 +125,64 @@ body {
 	vertical-align: middle;
 }
 
+.box_media1 {
+	padding: 10px;
+	display: inline-block;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100px;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+	/*transform: rotate(30deg);*/
+	width: 100px;
+	height: 70px;
+	margin-right: 10px;
+	float: right;
+}
+
+.bounce{
+	transition-property: width;
+	transition-timing-function: ease-in;/*cubic-bezier(0.1, -0.6, 0.2, 0);*/
+	transition-duration: 100ms;
+}
+.bounce:hover{
+	width: 110px;
+}
+
+.simple_box {
+	padding: 10px;
+	width: 130px;
+	height: 70px;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+	position: absolute;
+}
+
+
+@keyframes shake {
+	0% { left:0; }
+	20% { left:-2%; }
+	40% { left: 2%; }
+	60% { left:-2%; }
+	80% { left:2%; }
+	100% { left:0; }
+}
+
+.shake {
+	animation-name: shake;
+	animation-duration: 0.5s;
+	animation-delay: 1s;
+	animation-iteration-count: 10;
+	animation-timing-function: ease-in-out;
+}
+
+/*
 @media screen and (min-width: 720px) {
 	.box_media1 {
-		background-color: #5a6268;
+		background-color: rgba(45, 10 ,250, 0.1);
+		background-image: url("/img/kitty.jpg");
+		background-image: linear-gradient(to bottom right, red , yellow);
 		width: 200px;
 		height: 130px;
-		display: inline-block;
-		padding: 10px;
+		opacity: 0.8
 	}
 }
 
@@ -114,7 +192,14 @@ body {
 		width: 100px;
 		height: 130px;
 		border: 1px solid #ff0000;
-		display: inline-block;
-		padding: 10px;
 	}
 }
+
+@media screen and (min-width: 421px) and (max-width: 719px) {
+	.box_media1 {
+		background-color: #6f42c1;
+		width: 100px;
+		height: 130px;
+		border: 3px solid yellow;
+	}
+}*/
