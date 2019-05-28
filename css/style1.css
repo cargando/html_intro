@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,700);
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,700");
 *,
 *::before,
 *::after { 
@@ -17,20 +17,20 @@ a {
   height: 100%;
 }
 
-.menu-opener, .menu-opener:hover, .menu-opener.active, .menu-opener-inner, .menu-opener-inner::before, .menu-opener-inner::after, .menu, .menu.active {
-  transition-duration: 500ms;
+.menu-link, .menu-opener, .menu-opener:hover, .menu-opener.active, .menu-opener-inner, .menu-opener-inner::before, .menu-opener-inner::after, .menu, .menu.active {
+  transition-duration: 1250ms;
   transition-property:  all;
   transition-timing-function: ease-out;
 }
 
 .menu-opener {
   cursor: pointer;
+  width: 64px;
   height: 64px;
   position: absolute;
   top: 2%;
   left: 1%;
   user-select: none;
-  width: 64px;
 }
 .menu-opener:hover, .menu-opener.active {
   background: #f1c40f;
@@ -39,9 +39,9 @@ a {
 .menu-opener-inner {
   background: #fff;
   height: .5rem;
+  width: 2.5rem;
   margin-left: .75rem;
   margin-top: 1.75rem;
-  width: 2.5rem;
 }
 .menu-opener-inner::before, .menu-opener-inner::after {
   background: white;
@@ -53,6 +53,7 @@ a {
 .menu-opener-inner::before {
   transform: translateY(-0.75rem);
 }
+
 .menu-opener-inner::after {
   transform: translateY(0.25rem);
 }
@@ -98,7 +99,7 @@ a {
   color: transparent;
   display: flex;
   flex: 1 1 auto;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 100;
   height: 100%;
   text-align: center;
@@ -124,5 +125,6 @@ a {
   }
 }
 .menu-link li:hover {
-  background-color: 
+  background-color: #fff;
+	color: #f1c40f;
 }

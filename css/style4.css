@@ -12,6 +12,13 @@
 
 	height: 70px;
 	box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+
+	transition: font-size 3s linear, background-color 1s linear, color 1s ease-in-out, width 2s ease;
+	-moz-transition: font-size 3s linear, background-color 1s linear, color 1s ease-in-out, width 2s ease;
+	-webkit-transition: font-size 3s linear,background-color 1s linear, color  1s ease-in-out, width 2s ease;
+	-o-transition: font-size 3s linear, background-color 1s linear, color 1s ease-in-out, width 2s ease;
+
+
 }
 
 

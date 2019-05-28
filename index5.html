@@ -9,6 +9,7 @@
   <nav class="menu-opener">
     <div class="menu-opener-inner"></div>
   </nav>
+
   <nav class="menu">
     <ul class="menu-inner">
       <a href="#" class="menu-link">
@@ -39,19 +40,23 @@
   </nav>
 <br><br><br><h1>Yo!!!!! sdkjhfskjdhkjh</h1>
 <script>
-function toggle() {
-    if (document.querySelector(".menu-opener").classList.contains('active')) {
-        document.querySelector(".menu-opener-inner").classList.remove("active");
-        document.querySelector(".menu-opener").classList.remove("active");
-        document.querySelector(".menu").classList.remove("active");        
+
+	const toggle = () => {
+		var activeClass = 'active';
+
+    if (document.querySelector(".menu-opener").classList.contains(activeClass)) {
+        document.querySelector(".menu-opener-inner").classList.remove(activeClass);
+        document.querySelector(".menu-opener").classList.remove(activeClass);
+        document.querySelector(".menu").classList.remove(activeClass);
     } else {
-        document.querySelector(".menu-opener-inner").classList.add("active");
-        document.querySelector(".menu-opener").classList.add("active");
-        document.querySelector(".menu").classList.add("active");        
+        document.querySelector(".menu-opener-inner").classList.add(activeClass);
+        document.querySelector(".menu-opener").classList.add(activeClass);
+        document.querySelector(".menu").classList.add(activeClass);
     }//*/
 }
-    document.querySelector('.menu-opener').onclick = toggle;
+	document.querySelector('.menu-opener').onclick = toggle;
+
     // $(".menu-opener, .menu-opener-inner, .menu").toggleClass("active");
-</script
+</script>
 </body>
 </html>
