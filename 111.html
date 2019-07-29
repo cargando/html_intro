@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Мой супер проект на HTML</title>
+		<!-- link rel="stylesheet" href="/css/style1.css" -->
+		<style>
+
+			h1 {
+				color: blue;
+			}
+			h1 {
+				color: red;
+			}
+			h2 {
+				color: blue;
+			}
+			.big_gren_header {
+				color: darkgreen;
+				font-size: 20px;
+			}
+			.italic {
+				font-style: italic;
+			}
+			.dark_bg {
+				background-color: #9fcdff;
+			}
+			#super_header {
+				background-color: #4e555b;
+				color: white;
+			}
+			p i {
+				color: #F37272;
+			}
+			a[target=_self] {
+				color: #F37272;
+				font-weight: bold;
+			}
+			p:hover {
+				color: peachpuff !important;
+				text-decoration: none;
+			}
+
+			a:link {
+				color: black;
+				text-decoration: underline;
+			}
+			a:visited {
+				color: #9fcdff;
+				font-weight: bold;
+				border-bottom: 1px dashed #9fcdff;
+				text-decoration: none;
+			}
+			textarea:focus {
+				font-size: 20px;
+			}
+			tr:nth-child(odd) {
+				background-color: inherit;
+				color: #4e555b;
+			}
+
+			.first-div {
+				position: relative;
+				max-width: 500px;
+				min-width: 300px;
+				border: 3px solid #005cbf;
+				background-color: #9fcdff;
+				padding: 20px;
+				margin: 0 auto;
+			}
+			.inline-span {
+				display: inline-block;
+				width: 250px;
+				background-color: #00FF00;
+				color: #6f42c1;
+			}
+			.simple {
+				width: 500px;
+				margin: 50px auto;
+				background-color: #6f42c1;
+				border: 1px darkorange dashed;
+				box-sizing: border-box;
+			}
+			.worker {
+				width: 500px;
+				margin: 50px auto;
+				background-color: #6f42c1;
+				padding: 50px;
+				border: 10px dashed #ffe8a1;
+				box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+			}
+
+			.relative1 {
+				position: relative;
+				background-color: #ffe8a1;
+				border: #6f42c1;
+			}
+			.relative2 {
+				position: relative;
+				top: -20px;
+				left: 20px;
+				background-color: peru;
+				border: plum;
+				width: 500px;
+			}
+			.fixed-block {
+				position: fixed;
+				top: 20px;
+				right: 10px;
+				width: 100px;
+				height: 100px;
+				background-color: #71dd8a;
+				border: #6f42c1 1px solid;
+				z-index: 5;
+			}
+			.fixed2{
+				position: fixed;
+				top: 20px;
+				right: 90px;
+				width: 50px;
+				height: 50px;
+				background-color: #F37272;
+				border: #6f42c1 1px solid;
+				z-index: 6;
+			}
+			.absolute-block{
+				position: absolute;
+				width: 60px;
+				height: 40px;
+				top: 10px;
+				left: 20px;
+				background-color: #0c5460;
+				border: 1px solid #fd7e14;
+			}
+
+			body {
+				margin: 0;
+			}
+
+
+			.container {
+				position: relative;
+			}
+			nav {
+				position: absolute;
+				left: 0px;
+				width: 200px;
+			}
+			section {
+				/* position is static by default */
+				margin-left: 200px;
+			}
+			footer {
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				height: 70px;
+				background-color: white;
+				width: 100%;
+			}
+
+
+		</style>
+
+	</head>
+	<body>
+		<div class="container"  style="border: 1px solid #533f03">
+			<nav>
+				<ul>
+					<li>Главная</li>
+					<li>О компании</li>
+					<li>Продукты</li>
+					<li>Контакты</li>
+				</ul>
+			</nav>
+			<section style="border: 1px solid #fd7e14">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue.
+			</section>
+			<section  style="border: 1px solid #17a2b8">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue.
+			</section>
+			<section  style="border: 1px solid #71dd8a">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue.
+			</section>
+		</div>
+
+		<div>
+
+		</div>
+
+	<br>
+	<div class="fixed-block">
+		Привет мир!!! Я СУПЕР FIXED!!!
+	</div>
+	<div class="fixed2">
+		Я СУПЕР FIXED 2!!!
+	</div>
+		<h1>Привет мир!!! рлорлорло</h1>
+		<h2>Привет мир обычный!!! рлорлорло</h2>
+		<h2 id="super_header">Привет мир с идентификатором!!! рлорлорло</h2>
+		<h3>Привет мир!!! рлорлорло</h3>
+		<h4>Привет мир!!! рлорлорло</h4>
+		<h5 style="color: magenta">Привет мир!!! рлорлорло</h5>
+		<h6>Привет мир!</h6>
+		<br> <br>
+		<a href="http://ttt2.ru">Ссылка номер 1 на сайт ttt.ru</a><br>
+		<a href="https://mail.ru">Ссылка номер 1 на сайт mail.ru</a><br>
+		<a href="http://yandex.ru">Ссылка номер 1 на сайт yandex.ru</a><br>
+			<Br>
+		<div class="first-div">Первый DIV<br><br> сообщении розыск
+			<span class="inline-span">Игоря Егоровича Зайцева</span>. В сообщении, на которое
+			<div class="absolute-block">111</div>
+		</div>
+		<div class="first-div">ВТОРОЙ DIV<br><br>DIV
+		</div>
+
+		<Br><Br>
+
+		<div class="simple">Первый DIV<br><br> сообщении розыск
+			<span class="inline-span">Игоря Егоровича Зайцева</span>. В сообщении, на которое
+		</div>
+		<div class="worker">ВТОРОЙ DIV<br><br>DIV
+		</div>
+<br><br>
+
+		<div class="relative1">Первый DIV<br><br> сообщении розыск
+			<span class="inline-span">Игоря Егоровича Зайцева</span>. В сообщении, на которое
+		</div>
+		<div class="relative2">ВТОРОЙ DIV<br><br>DIV
+		</div>
+
+
+
+		<div class="big_gren_header">
+				МВД Австрии объявило в розыск Игоря Егоровича Зайцева. В сообщении, на которое ссылается издание Osterreich Zeitung, утверждается, что 65-летний мужчина подозревается в том, что «тайно» проводил секретные действия в пользу российской военной разведки «в ущерб интересам Австрийской республики».
+<br><br>
+				<b>В сообщении австрийской полиции также отмечается</b>, <strong>что подозреваемый родился 6 декабря 1954</strong> года в Москве.
+
+				<i>Издание Kurier утверждает</i>, что <u>Зайцева <em>подозревают в разглашении</em> государственных</u> секретов и военной тайны, Зайцев объявлен австрийцами в международный розыск. По информации Kurier, по факту расследования был проведен обыск в Зальцбурге.
+			</div>
+	<p>
+		<strike>Издание Kurier утверждает</strike>, что Зайцева подозревают в разглашении государственных секретов и военной тайны, Зайцев объявлен австрийцами в международный розыск. По информации Kurier, по факту расследования был проведен обыск в Зальцбурге.
+		<br><br>
+		<a href="http://yandex.ru" target="_blank">ссылка на сайт яндекса</a>
+		<br><br><cite>МВД Австрии объявило в розыск <a href="http://yandex.ru"  target="_self">Игоря Егоровича Зайцева</a>. В сообщении, на которое ссылае</cite>
+	</p>
+	<p>
+		Канадский хоккеист Максим Тальбо, игравший в Континентальной хоккейной лиге (КХЛ), вспомнил о том, как в первый раз попал в Магнитогорск. О своих впечатлениях спортсмен рассказал в подкасте Spittin' Chiclets.
+
+			<blockquote class="big_gren_header italic dark_bg">
+				Тальбо вспомнил, что его первая выездная игра в рамках КХЛ прошла именно в Магнитогорске. «Самое дерьмовое место на свете. Очень маленький город, очень загрязненный», — поделился канадец.
+			</blockquote>
+			Он также рассказал, что знал о существовании ночного клуба, принадлежавшего российскому хоккеисту Евгению Малкину. «Но Магнитогорск — это не тот город, в котором хочешь прогуляться ночью», — отметил Тальбо.
+	</p>
+
+	<ol class="dark_bg" type="i" start="1995" style="margin-left: 120px;">
+		<li>Опция номер один</li>
+		<li>Опция номер два</li>
+		<li>Опция номер три</li>
+		<li>Опция номер четыре</li>
+	</ol>
+
+		<ul type="square">
+			<li>Опция номер один</li>
+			<li>Опция номер два</li>
+			<li>Опция номер три</li>
+			<li>Опция номер четыре</li>
+		</ul>
+
+		<div>
+			Канадский хоккеист Максим Тальбо, игравший в Континентальной хоккейной лиге (КХЛ), вспомнил о том, как в первый раз попал в Магнитогорск. О своих впечатлениях спортсмен рассказал в подкасте Spittin' Chiclets.
+		</div>
+		<img src="/img/kitty.jpg">
+		<br>
+		<a href="http://mail.ru" target="_blank">
+			<img src="/img/kitty.jpg" width="120">
+		</a>
+		<hr size="1" noshade color="#ff000">
+		<div>
+			Канадский хоккеист &lt;sdfsdfsd&gt;, игравший в Континентальной&copy; хоккейной лиге (КХЛ), вспомнил о том, как в первый раз попал в Магнитогорск. О своих впечатлениях спортсмен рассказал в подкасте Spittin' Chiclets.
+		</div>
+		<br>
+		<table border="1">
+			<tr>
+				<th>Заголовок 1 </th>
+				<th>Заголовок 2 </th>
+			</tr>
+			<tr>
+				<td>Ячейка №1</td>
+				<td>Ячейка №2</td>
+			</tr>
+		</table>
+		<br>
+
+		<table width="800" border="1" cellpadding="10" cellspacing="1">
+			<tr>
+				<th>ФИО</th>
+				<th>Курс </th>
+				<th>Средний балл </th>
+			</tr>
+			<tr>
+				<td width="*">Иванов Иван Иваныч</td>
+				<td width="100" align="right">II</td>
+				<td width="100">4.5</td>
+			</tr>
+			<tr>
+				<td>Петров Петр Петрович</td>
+				<td align="right" colspan="2">II</td>
+			</tr>
+			<tr>
+				<td>Рогожкина Евгения Ивановна </td>
+				<td>II</td>
+				<td rowspan="2" valign="bottom">5</td>
+			</tr>
+			<tr>
+				<td>Пригожина Анастасия Ивановна </td>
+				<td>II</td>
+			</tr>
+		</table>
+	<br>
+		<meter value="40" max="100" low="10" high="60">Низкая</meter>
+<br>
+		<form action="/index.php" type="GET">
+			<label for="userName">Логин</label><br>
+			<input id="userName" type="text" value="" disabled placeholder="Введите ваш логин"><br><br>
+			<label for="userName2">Логин</label><br>
+			<input id="userName2" type="text" value="242342432" readonly placeholder="Введите ваш логин"><br><br>
+			<label for="userPass">Пароль</label><br>
+			<input id="userPass" type="password" value=""  placeholder="Введите ваш пароль"><br>
+
+			<label for="userRole">Роль</label><br>
+			<select id="userRole" name="role">
+				<option value="1">admin</option>
+				<option value="1">project manager</option>
+				<option value="1">super boss</option>
+			</select>
+			<br><br>
+			<select id="userRole2" multiple name="role">
+				<option value="1">admin</option>
+				<option value="2">project manager</option>
+				<option value="3">super boss</option>
+				<option value="4">admin</option>
+				<option value="5">project manager</option>
+				<option value="6">super boss</option>
+			</select>
+			<br><br>
+			<label >Пароль</label><br>
+			<input name="v1" type="checkbox"> - check box 1<br>
+			<input name="v2" type="checkbox" checked="checked"> - check box 2<br>
+			<input name="v3" type="checkbox" checked="checked"> - check box 3<br>
+			<input name="v$" type="checkbox" checked="checked"> - check box 4<br>
+
+			<Br><br>
+			<input name="a1" type="radio" checked="checked"> - radio button 1<br>
+			<input name="a1" type="radio" checked="checked"> - radio button 2<br>
+			<input name="a1" type="radio" checked="checked"> - radio button 3<br>
+			<input name="a1" type="radio" checked="checked"> - radio button 4<br>
+			<Br><br>
+			<input name="a2" type="radio" checked="checked"> - radio button 5<br>
+			<input name="a2" type="radio" checked="checked"> - radio button 6<br>
+			<input name="a2" type="radio" checked="checked"> - radio button 7<br>
+			<input name="a2" type="radio" checked="checked"> - radio button 8<br>
+
+			<br><br>
+			<input name="a2" type="color" checked="checked"> - color picker<br><br>
+			<input name="a2" type="number"> - color picker<br>
+			<textarea rows="10" cols="50">sdfsdf sdf sdf</textarea>
+<br><br>
+			<button>Simple Button </button>
+			<input type="button" value="Simple Button 2"><br><br>
+			<input type="reset" value="Reset"><br><br>
+			<input type="submit" value="Submit"><br><br>
+		</form>
+		<dl>
+			<dt>Вопрос про миграцию льдов антарктики в Африку</dt>
+			<dd>
+				«В случае принятия законопроекта может быть разрушена уникальная экосистема интернет-бизнесов в России, где локальные игроки успешно конкурируют с глобальными компаниями. В результате пострадают конечные пользователи. Мы считаем, что законопроект в текущем виде не должен быть принят, и готовы участвовать в его обсуждении», — заявили РБК в пресс-службе компании.
+
+				Против законопроекта выступил и конкурент «Яндекса» Mail.Ru Group. В компании заявили, что законопроект в текущей редакции принят быть не может, но добавили, что готовы участвовать в дискуссии о нем.
+
+			</dd>
+			<dt>Вопрос про миграцию льдов антарктики в Африку</dt>
+			<dd>
+				«В случае принятия законопроекта может быть разрушена уникальная экосистема интернет-бизнесов в России, где локальные игроки успешно конкурируют с глобальными компаниями. В результате пострадают конечные пользователи. Мы считаем, что законопроект в текущем виде не должен быть принят, и готовы участвовать в его обсуждении», — заявили РБК в пресс-службе компании.
+
+				Против законопроекта выступил и конкурент «Яндекса» Mail.Ru Group. В компании заявили, что законопроект в текущей редакции принят быть не может, но добавили, что готовы участвовать в дискуссии о нем.
+
+			</dd>
+			<dt>Вопрос про миграцию льдов антарктики в Африку</dt>
+			<dd>
+				«В случае принятия законопроекта может быть разрушена уникальная экосистема интернет-бизнесов в России, где локальные игроки успешно конкурируют с глобальными компаниями. В результате пострадают конечные пользователи. Мы считаем, что законопроект в текущем виде не должен быть принят, и готовы участвовать в его обсуждении», — заявили РБК в пресс-службе компании.
+
+				Против законопроекта выступил и конкурент «Яндекса» Mail.Ru Group. В компании заявили, что законопроект в текущей редакции принят быть не может, но добавили, что готовы участвовать в дискуссии о нем.
+
+			</dd>
+		</dl>
+
+<br><br><br><br>
+	</body>
+</html>

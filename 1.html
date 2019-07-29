@@ -113,8 +113,77 @@
 	<a href="http://ya.ru"><img src="/img/skate.jpg" height="50"></a>
 	<a href="http://ya.ru" target="_blank">Ссылка на яндекс</a>
 	<br><br><br><br><br>&nbsp;
+	<script>
+		var user1 = {
+			fName: 'Вася',
+			lName: 'Петров',
+			age: 30,
+			kids: [
+				{
+					name: 'Елена',
+					age: 6,
+				},
+				{
+					name: 'Анатоле',
+					age: 15,
+				}
+			]
+		}
+
+		function Person(fname, lname, age) {
+			this.fname = fname;
+			this.lname = lname;
+			this.age = age;
+			this.printName = function () {
+				console.log('ФИО студента:', this.fname, this.lname);
+			}
+		}
+
+		var user2 = new Person('Иван', 'Иванов', 50);
+		var user3 = new Person('Анна', 'Иванова', 20);
+		var user4 = new Person('Анатоле', 'Иванов', 25);
+
+		console.log('USER1 = ', user1);
+		console.log('USER2 = ', user2, user3, user4);
+		user3.printName();
+
+		class Student {
+			constructor(fname, lname, age, course) {
+				this.fname = fname;
+				this.lname = lname;
+				this.age = age;
+				this.course = course;
+				this.printName = function () {
+					console.log('ФИО студента:', this.fname, this.lname);
+				}
+			}
+			printStudet() {
+				console.log('Student = ', this.fname, this.lname, this.age, this.course)
+			}
+		}
+
+		var student1 = new Student('Анатоле', 'Иванов', 22, "5й курс");
+		student1.printStudet();
+		student1.printName();
+
+
+
+		class ExStudent extends Person {
+			constructor(fname, lname, age, course) {
+				super(fname, lname, age);
+				this.course = course;
+			}
+			printStudet() {
+				console.log('Student = ', this.fname, this.lname, this.age, this.course)
+			}
+		}
+
+		var extendedStudent = new ExStudent('Евгений', 'Петров', 22, "4й курс")
+		console.log("extendedStudent =", extendedStudent);
+
+		var ms1 = ['Петров', 'Сидовров'];
+		console.log("ms1 =", ms1);
+	</script>
+
 </body>
-<strong>текст жирным</strong>
-<em>курсив</em>
-<u>подчеркнутый</u>
 </html>
