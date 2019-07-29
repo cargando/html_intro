@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Мой супер проект на HTML</title>
-		<!-- link rel="stylesheet" href="/css/style1.css" -->
+		<link rel="stylesheet" href="/css/style1.css">
 		<style>
 
 			h1 {
@@ -116,12 +116,13 @@
 				z-index: 5;
 			}
 			.fixed2{
+				font-family: "Times New Roman", Times, serif;
 				position: fixed;
 				top: 20px;
 				right: 90px;
 				width: 50px;
 				height: 50px;
-				background-color: #F37272;
+				background-color: rgba(130, 255, 20, 0.1);;
 				border: #6f42c1 1px solid;
 				z-index: 6;
 			}
@@ -161,7 +162,39 @@
 				width: 100%;
 			}
 
+		.container2 {
+			background-color: #4e555b;
+			color: white;
+			border: 1px solid black;
+		}
+			.float1 {
+				float: right;
+				margin: 0 0 1em 1em;
+			}
 
+			.clearfix {
+				overflow: auto;
+				zoom: 1;
+			}
+
+			.clearfix nav {
+				float: left;
+				width: 200px;
+				color: rgb(130, 255, 20);
+			}
+			.clearfix section {
+				margin-left: 200px;
+			}
+			.round-corner {
+				border-radius: 15px;
+			}
+			.circle {
+				border-radius: 50%;
+				border: 1px dashed #fd7e14;
+				background-color: #71dd8a;
+				width: 50px;
+				height: 50px;
+			}
 		</style>
 
 	</head>
@@ -186,8 +219,33 @@
 			</section>
 		</div>
 
-		<div>
+		<div class="container2">
+			<div class="circle"></div>
+			<h1>FLOAT</h1>
+			<img src="/img/kitty.jpg" width="150" class="float1 round-corner">
+			<img src="/img/skate.jpg" width="150" class="float1">
+			Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+		</div>
 
+		<h1>Nav with FLOATs</h1>
+		<div class="clearfix"  style="border: 1px solid #533f03">
+			<nav>
+				<ul>
+					<li>Главная 2</li>
+					<li>О компании</li>
+					<li>Продукты</li>
+					<li>Контакты</li>
+				</ul>
+			</nav>
+			<section style="border: 1px solid #fd7e14">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue.
+			</section>
+			<section  style="border: 1px solid #17a2b8">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue.
+			</section>
+			<section  style="border: 1px solid #71dd8a">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue.
+			</section>
 		</div>
 
 	<br>
