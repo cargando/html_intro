@@ -1,0 +1,178 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.s1 {
+	background: #f06d06;
+	border: 1px solid #00FF00;
+
+}
+
+.s1 header, nav {
+	text-align: center;
+	background: white;
+	margin: 20px 0;
+	padding: 10px;
+}
+.s1 nav {
+	border-top: white;
+}
+.s1 nav a {
+	text-decoration: none;
+	background: #333;
+	border-radius: 5px;
+	color: white;
+	padding: 3px 8px;
+	line-height: 180%;
+}
+
+.s2 {
+	background: #f1c40f;
+	border: 1px solid #005cbf;
+}
+
+.s2 .center_block {
+	display: block;
+	margin: 10px auto;
+	width: 200px;
+	background: black;
+	padding: 20px;
+	color: white;
+}
+
+.s3 {
+	background: #00FF00;
+	border: 1px solid #005cbf;
+}
+
+.s3 .center_inline_block {
+	text-align: center;
+	padding: 20px;
+}
+
+.s3 .center_inline_block div {
+	display: inline-block;
+	text-align: left;
+	padding: 5px;
+	background-color: moccasin;
+	border-radius: 3px;
+	max-width: 100px;
+}
+
+.s3 .center_flex {
+	display: flex;
+	justify-content: center;
+}
+
+.s3 .center_flex div {
+	padding: 5px;
+	background-color: moccasin;
+	border-radius: 3px;
+	max-width: 100px;
+	margin-right: 10px;
+}
+
+.s4 {
+	background-color: #fc8368;
+	border: 1px solid #f1c40f;
+	font-size: 80%;
+}
+.s4 .center_inline_block {
+	background: white;
+	margin: 20px 0;
+	padding: 50px;
+}
+
+.s4 .center_inline_block a {
+	background: black;
+	color: white;
+	padding: 40px 30px;
+	text-decoration: none;
+}
+.s4 .center_inline_block2 {
+	background: black;
+	color: white;
+	height: 100px;
+	line-height: 100px;
+	padding: 20px;
+	width: 50%;
+	white-space: nowrap;
+}
+
+.s5 {
+	background: #f06d06;
+	font-size: 80%;
+	border: 1px saddlebrown solid;
+}
+
+.s5 .center_block {
+	background: white;
+	height: 300px;
+	margin: 20px;
+	width: 300px;
+	position: relative;
+	resize: vertical;
+	overflow: auto;
+}
+
+.s5 .center_block div {
+	position: absolute;
+	top: 50%;
+	left: 20px;
+	right: 20px;
+	height: 100px;
+	margin-top: -70px;
+	background: black;
+	color: white;
+	padding: 20px;
+}
+
+.s6 {
+	background: #b3d7ff;
+	font-size: 80%;
+	border: 1px saddlebrown solid;
+}
+
+.s6 .center_block {
+	background: white;
+	height: 300px;
+	margin: 20px;
+	width: 300px;
+	position: relative;
+	resize: vertical;
+	overflow: auto;
+}
+
+.s6 .center_block div {
+	position: absolute;
+	top: 50%;
+	left: 20px;
+	right: 20px;
+	background: black;
+	color: white;
+	padding: 20px;
+	transform: translateY(-50%);
+	resize: vertical;
+	overflow: auto;
+}
+
+.s7_flex {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	background-color: green;
+	padding: 10px;
+}
+
+.s7_flex  a {
+	background: black;
+	color: white;
+	padding: 10px;
+	text-decoration: none;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}

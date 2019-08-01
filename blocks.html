@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Blocks</title>
+	<link rel="stylesheet" href="/css/blocks.css">
+</head>
+<body>
+<br>
+<h1>Blocks</h1>
+<br>
+<h2>Если элемент является строчным или строчно-блочным или еще каким-то из строчно-....(display: inline...)</h2>
+<section class="s1">
+	<header>
+		This text is centered.
+	</header>
+
+	<nav role='navigation'>
+		<a href="#0">One</a>
+		<a href="#0">Two</a>
+		<a href="#0">Three</a>
+		<a href="#0">Four</a>
+	</nav>
+</section>
+<br>
+<h2>Если элемент является блочным (display: block)</h2>
+
+	<section class="s2">
+		<div class="center_block">
+			Block in the center of the page
+		</div>
+	</section>
+<br>
+
+<h2>Если элемент является блочным (display: block) и несколько элементов</h2>
+<section class="s3">
+	<h3>Способ через строчно-блочные элементы</h3>
+	<div class="center_inline_block">
+		<div>Как вы знаете, РБК работает по рекламной модели бизнеса.</div>
+		<div>Это значит, что вы получаете полный доступ</div>
+		<div>Блок 3</div>
+	</div>
+	<h3>Способ через flex</h3>
+	<div class="center_flex">
+		<div>Как вы знаете, РБК работает по рекламной модели бизнеса.</div>
+		<div>Это значит, что вы получаете полный доступ</div>
+		<div>Блок 3</div>
+
+	</div>
+</section>
+<br>
+<h2>Центрирование по вертикали</h2>
+<h3>Если элемент строчный или строчно-блочный (или другой строчно...) (display: inline-...)</h3>
+<h4>Вариант через просто  padding-top и padding-bottom</h4>
+	<section class="s4">
+		<div class="center_inline_block">
+			<a href="#0">We're</a>
+			<a href="#0">Centered</a>
+			<a href="#0">Bits of</a>
+			<a href="#0">Text</a>
+		</div>
+	</section>
+<br>
+		<h4>Вариант через line-height</h4>
+		<section class="s4">
+			<div class="center_inline_block2">
+				Текст (или строчно-блочный элемент) отцентрированный по середине (по высоте)
+			</div>
+
+		</section>
+<br><br>
+<h2>Если элемент блочный (display: block)</h2>
+<h3>Нюанс - если известна высота элемента</h3>
+<section class="s5">
+	<div class="center_block">
+		<div>
+			Мы понимаем, что такой вариант может подойти не всем. Поэтому предлагаем и альтернативу — приобрести подписку на РБК без баннеров.
+			</div>
+	</div>
+</section>
+<h3>Если высота элемента неизвестна</h3>
+<section class="s6">
+	<div class="center_block">
+		<div>
+			Мы понимаем, что такой вариант может подойти не всем. Поэтому предлагаем и альтернативу — приобрести подписку на РБК без баннеров.
+		</div>
+	</div>
+</section>
+<br><Br>
+<h2>Выравниваниче через FLEX'ы</h2>
+<section class="s7_flex">
+	<a href="#0">We're</a>
+	<a href="#0">Centered</a>
+	<a href="#0">Bits of</a>
+	<a href="#0">Text</a>
+</section>
+<br><Br><br><Br><br><Br><br><Br><br><Br>&nbsp;
+</body>
+</html>
