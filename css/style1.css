@@ -1,14 +1,16 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+
 *,
 *::before,
-*::after { 
+*::after {
   box-sizing: border-box;
 }
 
 body {
   background: url("/img/skate.jpg") no-repeat;
   background-size: 2000px;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: 'Raleway', sans-serif;
+
 }
 
 a {
@@ -18,7 +20,7 @@ a {
 }
 
 .menu-link, .menu-opener, .menu-opener:hover, .menu-opener.active, .menu-opener-inner, .menu-opener-inner::before, .menu-opener-inner::after, .menu, .menu.active {
-  transition-duration: 1250ms;
+  transition-duration: 150ms;
   transition-property:  all;
   transition-timing-function: ease-out;
 }
@@ -31,6 +33,7 @@ a {
   top: 2%;
   left: 1%;
   user-select: none;
+	z-index: 10;
 }
 .menu-opener:hover, .menu-opener.active {
   background: #f1c40f;
@@ -43,6 +46,7 @@ a {
   margin-left: .75rem;
   margin-top: 1.75rem;
 }
+
 .menu-opener-inner::before, .menu-opener-inner::after {
   background: white;
   content: '';
@@ -50,6 +54,7 @@ a {
   height: .5rem;
   width: 2.5rem;
 }
+
 .menu-opener-inner::before {
   transform: translateY(-0.75rem);
 }
@@ -61,22 +66,21 @@ a {
   background: transparent;
 }
 .menu-opener-inner.active::before {
-  transform: translateY(0rem) rotate(-45deg);
+  transform: rotate(-45deg);
 }
 .menu-opener-inner.active::after {
-  transform: translateY(-0.5rem) translateX(0rem) rotate(45deg);
+  transform: translateY(-0.5rem) rotate(45deg);
 }
 
 .menu {
   background: #f1c40f;
-  color: transparent;
   height: 64px;
   position: absolute;
   top: 2%;
   left: 1%;
   user-select: none;
   width: 0rem;
-  z-index: -1;
+  z-index: 9;
 }
 .menu.active {
   width: 98vw;
@@ -105,10 +109,20 @@ a {
   text-align: center;
   text-decoration: none;
 }
+
 .menu-link li {
   margin: auto;
 }
 
+.menu-link:hover {
+	background: #fff !important;
+	color: #f1c40f !important;
+}
+
+.main-text:hover {
+	background: #fff !important;
+	color: #f1c40f !important;
+}
 @media screen and (max-width: 768px) {
   .menu {
     height: auto;
@@ -124,7 +138,4 @@ a {
     width: calc(100% - 0.5rem);
   }
 }
-.menu-link li:hover {
-  background-color: #fff;
-	color: #f1c40f;
-}
+

@@ -3,13 +3,20 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Blocks</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="/css/blocks.css">
 </head>
 <body>
 <br>
 <h1>Blocks</h1>
+<i style="font-size: 150px" class="fas fa-camera"></i>
+<i style="font-size: 50px" class="fas fa-ad"></i>
 <br>
+
+
 <h2>Если элемент является строчным или строчно-блочным или еще каким-то из строчно-....(display: inline...)</h2>
+
 <section class="s1">
 	<header>
 		This text is centered.
@@ -22,6 +29,9 @@
 		<a href="#0">Four</a>
 	</nav>
 </section>
+
+
+
 <br>
 <h2>Если элемент является блочным (display: block)</h2>
 
@@ -31,6 +41,11 @@
 		</div>
 	</section>
 <br>
+
+<div style="width: 500px; height: 500px; position: relative; background-color: yellow; border: 1px solid red;">
+	<div style="z-index: 6; width: 50px; height: 50px; border: 5px dashed greenyellow; position: absolute; top: 10px; right: 50px; background-color: #1b1e21"></div>
+	<div style="z-index: 5; width: 50px; height: 50px; border: 5px solid greenyellow; position: absolute; top: 20px; right: 50px; background-color: #0c5460"></div>
+</div>
 
 <h2>Если элемент является блочным (display: block) и несколько элементов</h2>
 <section class="s3">

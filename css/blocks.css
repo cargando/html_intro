@@ -113,7 +113,7 @@ body {
 	width: 300px;
 	position: relative;
 	resize: vertical;
-	overflow: auto;
+	overflow-y: auto;
 }
 
 .s5 .center_block div {

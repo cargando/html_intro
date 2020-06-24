@@ -3,16 +3,28 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Мой первый HELLO WORLD на HTML</title>
+	<style>
+		#super1 {
+			color: red;
+		}
+		.c1.c2 {
+			color: blue;
+		}
+		.c3 {
+			color: yellow;
+		}
+	</style>
 </head>
 
 <body>
-	<h1>Мой первый HELLO WORLD на HTML - 1 супер МОЩЬ!!! </h1>
-	<h2>Мой первый HELLO WORLD на HTML - 2 супер МОЩЬ!!!</h2>
-	<h3>Мой первый HELLO WORLD на HTML - 3 супер МОЩЬ!!! </h3>
-	<h4>Мой первый HELLO WORLD на HTML - 4 супер МОЩЬ!!!</h4>
-	<h5>Мой первый HELLO WORLD на HTML - 5 супер МОЩЬ!!!</h5>
-	<h6>Мой первый HELLO WORLD на HTML - 6 супер МОЩЬ!!!</h6>
 
+	<h6>Мой первый HELLO WORLD на HTML - 6 супер МОЩЬ!!!</h6>
+	<br>
+	<h1 id="super1" class="c1 c2 c3" style="color: #4e555b">
+		Some text here from C
+	</h1>
+	<br><br>
+	<a href="http://localhost:3000/4-sygrali-v-jashhik-rossijane-otkazyvajutsja-smotret-televizor">local</a>
 	<div>
 		Международное новостное агентство Reuters внесло правки в свой материал от 18 апреля, в котором со ссылкой на источники сообщалось, что Венесуэла получает деньги от продажи нефти по схеме, в которой присутствует «Роснефть». Изменения, как следует из информации на сайте агентства, были внесены во
 	</div>
@@ -114,75 +126,547 @@
 	<a href="http://ya.ru" target="_blank">Ссылка на яндекс</a>
 	<br><br><br><br><br>&nbsp;
 	<script>
-		var user1 = {
-			fName: 'Вася',
-			lName: 'Петров',
-			age: 30,
-			kids: [
-				{
-					name: 'Елена',
-					age: 6,
-				},
-				{
-					name: 'Анатоле',
-					age: 15,
+
+		// var user1 = {
+		// 	fName: 'Вася',
+		// 	lName: 'Петров',
+		// 	age: 30,
+		// 	kids: [
+		// 		{
+		// 			name: 'Елена',
+		// 			age: 6,
+		// 		},
+		// 		{
+		// 			name: 'Анатоле',
+		// 			age: 15,
+		// 		}
+		// 	]
+		// }
+		//
+		// function Person(fname, lname, age) {
+		// 	this.fname = fname;
+		// 	this.lname = lname;
+		// 	this.age = age;
+		// 	this.printName = function () {
+		// 		console.log('ФИО студента:', this.fname, this.lname);
+		// 	}
+		// }
+		//
+		// var user2 = new Person('Иван', 'Иванов', 50);
+		// var user3 = new Person('Анна', 'Иванова', 20);
+		// var user4 = new Person('Анатоле', 'Иванов', 25);
+		//
+		// console.log('USER1 = ', user1);
+		// console.log('USER2 = ', user2, user3, user4);
+		// user3.printName();
+		//
+		// class Student {
+		// 	constructor(fname, lname, age, course) {
+		// 		this.fname = fname;
+		// 		this.lname = lname;
+		// 		this.age = age;
+		// 		this.course = course;
+		// 		this.printName = function () {
+		// 			console.log('ФИО студента:', this.fname, this.lname);
+		// 		}
+		// 	}
+		// 	printStudet() {
+		// 		console.log('Student = ', this.fname, this.lname, this.age, this.course)
+		// 	}
+		// }
+		//
+		// var student1 = new Student('Анатоле', 'Иванов', 22, "5й курс");
+		// student1.printStudet();
+		// student1.printName();
+		//
+		//
+		//
+		// class ExStudent extends Person {
+		// 	constructor(fname, lname, age, course) {
+		// 		super(fname, lname, age);
+		// 		this.course = course;
+		// 	}
+		// 	printStudet() {
+		// 		console.log('Student = ', this.fname, this.lname, this.age, this.course)
+		// 	}
+		// }
+		//
+		// var extendedStudent = new ExStudent('Евгений', 'Петров', 22, "4й курс")
+		// console.log("extendedStudent =", extendedStudent);
+		//
+		// var ms1 = ['Петров', 'Сидовров'];
+		// console.log("ms1 =", ms1);
+		// console.log("JJ -> ");
+		// console.log((function (x, f = () => x ){
+		// 	// var x;
+		// 	var y = x;
+		// 	x = 2;
+		// 	return [x, y, f() ];
+		// })(1));
+		// console.log("JJ -> ");
+		//
+		// (function() {
+		// 	var a = b = 5;
+		// })();
+		//
+		// console.log(b);
+		//
+		// const name = 'Alex';
+		// const shape = {
+		// 	name: 'Ben',
+		// 	cal: function () {
+		// 		return this.name;
+		// 	}
+		// }
+		// const after = shape.cal;
+		// console.log(after())
+		// console.log(shape.cal())
+		//
+		// setTimeout(() => console.log("uno"), 0);
+		// const p = new Promise((r, c) => {
+		// 	console.log("dos");
+		// 	r()
+		// });
+		// p.then(() => console.log("tres"))
+		// console.log("quatro")
+
+		// console.log("// --------------");
+
+		// function getRandomInt(min, max) {
+		// 	min = Math.ceil(min);
+		// 	max = Math.floor(max);
+		// 	return Math.floor(Math.random() * (max - min + 1)) + min;
+		// }
+		//
+		// function fillMatrixOb(mx) {
+		// 	const ob = {};
+		//
+		// 	for (let i = 0; i < 10; i++) {
+		// 		for (let j = 0; j < 20; j++) {
+		// 			let tmp = 0;
+		// 			do {
+		// 				tmp = getRandomInt(1, 1000).toString();
+		// 			} while (ob[tmp]);
+		// 			ob[tmp] = true;
+		// 			mx[i][j] = +tmp;
+		// 		}
+		// 	}
+		// 	return mx
+		// }
+		//
+		// function fillMatrixAr(mx) {
+		// 	const ob = [];
+		//
+		// 	for (let i = 0; i < 10; i++) {
+		// 		for (let j = 0; j < 20; j++) {
+		// 			let tmp = 0;
+		// 			do {
+		// 				tmp = getRandomInt(1, 1000);
+		// 			} while (ob[tmp]);
+		// 			ob[tmp] = true;
+		// 			mx[i][j] = tmp;
+		// 		}
+		// 	}
+		// 	return mx
+		// }
+		//
+		// const matrix1 = [];
+		// const matrix2 = [];
+		//
+		// for (var i = 0; i < 10; i++) {
+		// 	matrix1[i] = [];
+		// 	matrix2[i] = [];
+		// }
+		// const t0 = performance.now();
+		// fillMatrixAr(matrix1);
+		// const t1 = performance.now();
+		//
+		// // const t3 = performance.now();
+		// // fillMatrixOb(matrix2);
+		// // const t4 = performance.now();
+		//
+		// console.log("Object :", t1 - t0); //, "Arr: ", t4 - t3);
+		// console.log("// --------------");
+// -------------------------
+// 		setTimeout(() => console.log("Uno"), 0);
+//
+//
+// 		Promise.resolve("Dos").
+// 			then((val) => {
+// 				setTimeout(() => console.log(val), 200)
+// 			}).
+// 			catch((val) => console.log(val));
+//
+// 		console.log("Tres");
+//
+// 		const PP = new Promise((res, rej) => {
+// 			console.log("half Quatro");
+// 			setTimeout(() => console.log("Quatro"), 2000);
+// 			rej("Cinco");
+// 			res();
+// 		});
+//
+// 		PP.then((val) => {
+// 				console.log("in resolve Seis1");
+// 				setTimeout(() => console.log(val), 0);
+// 		}).catch(val=>{
+// 			console.log("in reject Siete1");
+// 			setTimeout(() => console.log(val), 0);
+// 		});
+//
+// 		PP.then((val) => {
+// 				console.log("in resolve Seis2");
+// 				setTimeout(() => console.log(val), 2000);
+// 		}).catch(val=>{
+// 			console.log("in reject Siete2");
+// 			setTimeout(() => console.log(val), 2000);
+// 		});
+//
+// 		Promise.reject("Shit").
+// 			then(val => console.log(val)).
+// 			catch(val => console.log(val)).
+// 			then(val => console.log(`after catch, ${val}`));
+//
+// 		console.log("// --------------");
+//
+// 		console.log("{} == {}", {} == {});
+// 		console.log("{} === {}", {} === {});
+//
+// 		console.log("// --------------");
+//
+// 		const b = 5;
+// 		function DoSomething(b) {
+// 			console.log("inside b", b)
+// 			if (b) { b = 4;}
+// 			else {b = 1;}
+// 			var b;
+// 			return b;
+// 		}
+// 		console.log("do B", DoSomething(b));
+//
+// 		console.log("// --------------");
+//
+// 		var jj = 2;
+// 		while(jj--) {
+// 			console.log("jjrr=", jj)
+// 			setTimeout(() => console.log("jj=", jj), 1000);
+// 		}
+
+		// var bb = -1;
+		// while(bb--) {
+		// 	console.log("bb r =", bb)
+		// 	setTimeout(() => console.log("bb=", jj), 1000);
+		// 	if (bb < -100) break;
+		// }
+
+		// for(var k = 0; k < 5; k ++) {
+		// 	setTimeout(() => console.log("var k=", k), 1000);
+		// }
+		//
+		// for(let k = 0; k < 5; k ++) {
+		// 	setTimeout(() => console.log("let k=", k), 1000);
+		// }
+		//
+		// for(var k = 0; k < 5; k ++) {
+		// 	setTimeout(console.log.bind(k, "bind k=", k), 1000);
+		// }
+
+		// console.log("// --------------");
+		// const ob1 = {};
+		// const ob2 = {};
+		// const ob3 = {[ob1]: 1, [ob2]: 2}
+		// console.log("sum ob = ", ob3[ob1] + ob3[ob2]);
+		//
+		// console.log("// --------------");
+		// const ob_3 = new Map();
+		// ob_3.set(ob1, 1).set(ob2, 2);
+		// console.log("sum ob map = ", ob_3.get(ob1) + ob_3.get(ob2))
+		//
+		// const fn = p1 => p2 => {
+		// 	console.log("in = ", p1, p2);
+		// 	if (p2) {
+		// 		console.log("IF p2 ", p2);
+		// 		return fn(p1 + p2);
+		// 	}
+		// 	console.log("IF p2 ", p2);
+		// 	// return p2 ? fn(p1 + p2) : p1;
+		// 	return p1;
+		// };
+		// const fn2 = p1 => p2 => p2 ? fn2(p1 + p2) : p1;
+		//
+		// console.log("res = ", fn("1"))
+
+
+		// console.log("// --------------");
+		// function Node(data, next) {
+		// 	this.data = data;
+		// 	this.next = next;
+		// }
+		//
+		// const n1 = new Node("first",   null)
+		// const n2 = new Node("second",  n1)
+		// const n3 = new Node("third",   n2)
+		// const n4 = new Node("fourth",  n3)
+		// const n5 = new Node("fifth",   n4)
+		//
+		// // reverse linked list in linear time O(n)
+		// function reverse(head) {
+		// 	const tmp = [];
+		// 	let node = head
+		//
+		// 	// const walk = (obj) => {
+		// 	// 	if (obj.next !== null) {
+		// 	// 		tmp.unshift(obj.next);
+		// 	// 		walk(obj.next);
+		// 	// 	}
+		// 	// };
+		// 	while (node) {
+		// 		tmp.unshift(node);
+		// 		node = node.next;
+		// 	}
+		//
+		// 	// tmp.unshift(head);
+		// 	// walk(head);
+		// 	console.log('\nArr = ', tmp)
+		//
+		// 	const len = tmp.length - 1;
+		// 	for (let i = 0; i < len; i++) {
+		// 		console.log('before = ', tmp[i].data, tmp[i+1].data);
+		// 		tmp[i].next = tmp[i + 1];
+		// 		console.log('after = ', tmp[i])
+		// 	}
+		// 	tmp[len].next = null;
+		//
+		// 	return tmp[0]
+		// }
+		//
+		// function reverceLoop(head) {
+		//
+		// }
+
+		// console.log("Before", JSON.parse(JSON.stringify(n5)));
+		// console.log("After", reverse(n5));
+		// first -> second -> third -> fourth -> fifth
+
+
+		// console.log("// --------------");
+
+	// 	class A1 {
+	// 		name = 'A: Henry';
+	//
+	// 		constructor() {
+	// 			console.log(this.getName());
+	// 		}
+	//
+	// 		getName() {
+	// 			return this.name;
+	// 		}
+	// 	}
+	//
+	// 	class B1 extends A1 {
+	// 		name = 'B: Leila';
+	//
+	// 		constructor() {
+	// 			super();
+	// 			console.log(this.getName());
+	// 		}
+	//
+	// 		getName() {
+	// 			return this.name;
+	// 		}
+	//
+	// 	}
+	//
+	// 	const Base = new B1();
+	// console.log("Base", Base);
+
+		// console.log("// --------------");
+
+	// 	class Nomos {
+	// 		constructor() {
+	// 			this.name = 'Gertruda';
+	// 		}
+	//
+	// 		sayHi() {
+	// 			console.log("Nomos: Hi ", this.name, this);
+	// 		}
+	//
+	// 		sayBy() {
+	// 			console.log("Nomos: By ", this.name, this);
+	// 		}
+	// 	}
+	//
+	// 	function Bomos() {
+	// 		return {
+	// 			name: "Samuel",
+	// 			sayHi: function() {
+	// 				console.log("Bomos: Hi ", this.name, this);
+	// 			},
+	// 			sayBy: function() {
+	// 				console.log("Bomos: By ", this.name, this);
+	// 			}
+	// 		};
+	// 	}
+	//
+	// const nomos = new Nomos();
+	// const bomos = new Bomos();
+	//
+	// const lomos = {
+	// 	name: "Pedros",
+	// 	sayHi: function() {
+	// 		console.log("Lomos: Hi ", this.name, this);
+	// 	},
+	// 	sayBy: function() {
+	// 		console.log("Lomos By ", this.name, this);
+	// 	}
+	// };
+	// 	nomos.sayHi();
+	// 	bomos.sayHi();
+	// 	lomos.sayHi();
+
+		// const fnNomos = (nomos.name === 'Gertruda' ? nomos.sayHi : nomos.sayBy);
+		// const fnBomos = (bomos.name === 'Samuel' ? bomos.sayHi : bomos.sayBy);
+		// const fnLomos = (lomos.name === 'Pedros' ? lomos.sayHi : lomos.sayBy);
+		// console.log("Fn = ", fnLomos(), fnBomos(), fnNomos());
+
+		// console.log("// --------------");
+
+
+		// function doSomeAction() {
+		// 	console.log("this is doSomeAction: ", arguments)
+		// }
+		//
+		// function withWatch() {
+		//
+		// 	function fn() {
+		//
+		// 	}
+		// 	fn.counter = 0;
+		// 	fn.params = new Set();
+		// }
+		//
+		// const watch = withWatch(doSomeAction);
+
+		// console.log("// --------------");
+
+		// let foo = {};
+		// let bar = foo;
+		// foo.uno = 100;
+		// foo.dos = foo = {extra: 10};
+		// console.log("Foo/Bar = ", foo, bar)
+
+		// console.log("// --------------");
+
+		// function saySuperHy(val) {
+		// 	if (val == {name: 'Sanches'}) {
+		// 		console.log('Hey Sanches!')
+		// 	}
+		// 	if (val == {name: 'Rodriges'}) {
+		// 		console.log('Hey Rodriges!')
+		// 	}
+		// }
+		// const s1 = {name: 'Rodriges'};
+		// console.log(saySuperHy(s1));
+
+		// console.log("// --------------");
+
+		// console.log("Promise 1: one");
+		// new Promise(() => {
+		// 	console.log("Promise 1: two");
+		//
+		// });
+		// console.log("Promise 1: three");
+
+		// console.log("// --------------");
+
+		// console.log("Main: one");
+		// setTimeout(() => {
+		// 	console.log("Task #1: setTimeout 50 ms, from Main");
+		// }, 51);
+		//
+		// const pp2 = new Promise((go, suck) => {
+		// 	console.log("Main: two (Promise executor)");
+		//
+		// 	setTimeout(() => {
+		// 		console.log("Task #2: setTimeout 50 ms, from Promise executor");
+		// 	}, 50);
+		//
+		// 	go();
+		//
+		// 	// suck();
+		// });
+		//
+		// pp2
+		// 	.then((res) => {
+		// 		console.log("MICRO Task #1 (SUCCEEDED)");
+		// 	})
+		// 	.then((res) => {
+		// 		console.log("MICRO Task #1 after SUCCEEDED");
+		// 	})
+		// 	.catch((err) => {
+		// 		console.log("%c%s", ["color: red"], "MICRO Task #1 (REJECTED): one");
+		// 	});
+		//
+		// setTimeout(() => {
+		// 	console.log("Task #3: setTimeout 0 ms, from Main");
+		// }, 0);
+		//
+		// console.log("Main: three");
+
+		// console.log("// --------------");
+
+		// console.log("Main: one");
+		//
+		// setTimeout(() => {
+		// 	console.log("Task #1: setTimeout 'none' ms");
+		// });
+		//
+		// console.log("Main: two");
+		//
+		// setTimeout(() => {
+		// 	console.log("Task #2: setTimeout 0 ms");
+		// }, 0);
+		//
+		// console.log("Main: three");
+		//
+		// // console.log("// --------------");
+		//
+		// String.prototype.duplicate = function () { // !!! NOT () => {}
+		// 	return this + this;
+		// };
+		//
+		// console.log("some val -".duplicate());
+
+		// console.log("// --------------");
+
+		// про реакт Ref и возможность управлять ребенком через реф (вызывать стейт и пр)
+
+		// задача
+		// console.log(5[x => x +1] => через прокси вывести 5,4,3,2,1
+		Number.prototype.__proto__ = new Proxy(Number, {
+			get(target, key, receiver) {
+				let value = Reflect.get(...arguments);
+				console.log("PROXY keys =", Object.getOwnPropertyNames(target), Object.getOwnPropertyNames(target).filter(vl => vl === key).length);
+				console.log("PROXY target=", target, "key=", key, "type", typeof eval(key), "value=", value);
+				if (typeof eval(key) === "function") {
+					console.log("PROXY > got function");
+					return receiver;
 				}
-			]
-		}
-
-		function Person(fname, lname, age) {
-			this.fname = fname;
-			this.lname = lname;
-			this.age = age;
-			this.printName = function () {
-				console.log('ФИО студента:', this.fname, this.lname);
+				return Reflect.get(target, key, receiver);
 			}
-		}
+		});
 
-		var user2 = new Person('Иван', 'Иванов', 50);
-		var user3 = new Person('Анна', 'Иванова', 20);
-		var user4 = new Person('Анатоле', 'Иванов', 25);
+		let nn = 6;
+		const ob1 = {t: 10};
+		const ob2 = Object.create(ob1);
+		console.log("Main:: n = ", Number.name);
+		console.log("Main:: ob2 = ", ob2);
 
-		console.log('USER1 = ', user1);
-		console.log('USER2 = ', user2, user3, user4);
-		user3.printName();
+		// задача
+		// [[]][0]++ -> работает
+		// []++ не работает
 
-		class Student {
-			constructor(fname, lname, age, course) {
-				this.fname = fname;
-				this.lname = lname;
-				this.age = age;
-				this.course = course;
-				this.printName = function () {
-					console.log('ФИО студента:', this.fname, this.lname);
-				}
-			}
-			printStudet() {
-				console.log('Student = ', this.fname, this.lname, this.age, this.course)
-			}
-		}
-
-		var student1 = new Student('Анатоле', 'Иванов', 22, "5й курс");
-		student1.printStudet();
-		student1.printName();
-
-
-
-		class ExStudent extends Person {
-			constructor(fname, lname, age, course) {
-				super(fname, lname, age);
-				this.course = course;
-			}
-			printStudet() {
-				console.log('Student = ', this.fname, this.lname, this.age, this.course)
-			}
-		}
-
-		var extendedStudent = new ExStudent('Евгений', 'Петров', 22, "4й курс")
-		console.log("extendedStudent =", extendedStudent);
-
-		var ms1 = ['Петров', 'Сидовров'];
-		console.log("ms1 =", ms1);
+		// из массива объектов сделать запрос, например марка машины с номером и пробегом, через прокси сделать запрос ms["Fiat"] и он тебе возвращает все список всех фиатов
 	</script>
 
 </body>
