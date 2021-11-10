@@ -51,8 +51,8 @@
 	<h6>Заголовок 6го уровня</h6>
 	<p>
 	<img src="/img/skate.jpg" height="300" align="right">
-		Производит  <span style="color:RED; font-size:9px;">заголовок 1го уровняель легковых автомобилей </span> Lada АвтоВАЗ анонсировал начало продаЗаголовок 2го уровняж нового 
-		начало продаЗаголовок 2го уровняж нового 
+		Производит  <span style="color:RED; font-size:9px;">заголовок 1го уровняель легковых автомобилей </span> Lada АвтоВАЗ анонсировал начало продаЗаголовок 2го уровняж нового
+		начало продаЗаголовок 2го уровняж нового
 		 продаж 2овог2 Lada Vesta Sport, флагмана модельного ряда Lada Vesta. Рекомендованная цена машины, как уточняется в пресс-релизе на сайте компании, — от 1 009 900 руб. Таким образом, стартовая стоимость автомобиля Lada впервые в современной истории (после деноминации 1998 года) превысит 1 млн руб.
 		</p>
 		<p class="green_color">
@@ -136,20 +136,20 @@
                 <STYLE>
 					ol {
 					/* убираем стандартную нумерацию */
-					list-style: none; 
-					/* Идентифицируем счетчик и даем ему имя li. Значение счетчика не указано - по умолчанию оно равно 0 */ 
-					counter-reset: li; 
+					list-style: none;
+					/* Идентифицируем счетчик и даем ему имя li. Значение счетчика не указано - по умолчанию оно равно 0 */
+					counter-reset: li;
 					}
 					li:before {
 					/* Определяем элемент, который будет нумероваться — li. Псевдоэлемент before указывает, что содержимое, вставляемое при помощи свойства content, будет располагаться перед пунктами списка. Здесь же устанавливается значение приращения счетчика (по умолчанию равно 1). */
-					counter-increment: li; 
+					counter-increment: li;
 					/* С помощью свойства content выводится номер пункта списка. counters() означает, что генерируемый текст представляет собой значения всех счетчиков с таким именем. Точка в кавычках добавляет разделяющую точку между цифрами, а точка с пробелом добавляется перед содержимым каждого пункта списка */
-					content: counters(li,".") ". "; 
+					content: counters(li,".") ". ";
 					}
 				</STYLE>
 			<ol>
 			  <li>пункт</li> <!-1.->
-			  <li>пункт           
+			  <li>пункт
 				<ol>
 				  <li>пункт</li> <!-2.1.->
 				  <li>пункт</li> <!-2.2.->
@@ -157,14 +157,14 @@
 					<ol>
 					  <li>пункт</li> <!-2.3.1.->
 					  <li>пункт</li> <!-2.3.2.->
-					  <li>пункт</li> <!-2.3.3.-> 
+					  <li>пункт</li> <!-2.3.3.->
 					</ol>
 				  </li> <!-2.3.->
-				  <li>пункт</li> <!-2.4.->  
+				  <li>пункт</li> <!-2.4.->
 				</ol>
 			  </li> <!-2.->
-			  <li>пункт</li> <!-3.->        
-			  <li>пункт</li> <!-4.->        
+			  <li>пункт</li> <!-3.->
+			  <li>пункт</li> <!-4.->
 			</ol>
 <br><br><br><br><br><br>
 
@@ -198,22 +198,22 @@
 	</p>
 
 
-<input type="checkbox" name="n1"> - Some value<br> 
-<input type="checkbox" checked="checked" name="n2"> - Some value 2<br> 
-<input type="checkbox" checked="checked" name="n3"> - Some value 3<br> 
+<input type="checkbox" name="n1"> - Some value<br>
+<input type="checkbox" checked="checked" name="n2"> - Some value 2<br>
+<input type="checkbox" checked="checked" name="n3"> - Some value 3<br>
 
-<input type="radio" name="n4"> - Some value <br> 
-<input type="radio" required name="n4"> - Some value<br> 
-<input type="radio" name="n4"> - Some value<br> 
-<input type="radio" name="n4"> - Some value<br> 
+<input type="radio" name="n4"> - Some value <br>
+<input type="radio" required name="n4"> - Some value<br>
+<input type="radio" name="n4"> - Some value<br>
+<input type="radio" name="n4"> - Some value<br>
 
-<input type="radio" name="n5"> - Some value 5<br> 
-<input autofocus type="radio" name="n5"> - Some value 5<br> 
+<input type="radio" name="n5"> - Some value 5<br>
+<input autofocus type="radio" name="n5"> - Some value 5<br>
 <select>
-	<option>Some val 1</option>	
-	<option>Some val 2</option>	
-	<option>Some val 3</option>	
-	<option>Some val 4</option>	
+	<option>Some val 1</option>
+	<option>Some val 2</option>
+	<option>Some val 3</option>
+	<option>Some val 4</option>
 </select>
 
 </form>
@@ -294,7 +294,7 @@
 	<div style="display: inline; color: rgba(30, 100, 100, 0.1);">В 2019 году, согласно утвержденному ранее графику, россиян еще ждут мини-каникулы с 9 по 12 мая, а также трехдневные выходные с 2 по 4 ноября и выходной в среду, 12 июня.
 	</div>
 <script type="text/javascript">
-	
+
 function Person( name ) {
 	console.log('Person = ', Person);
 	console.log('Person THIS = ', this);
@@ -314,7 +314,7 @@ function Person( name ) {
 // console.log('Person().printName ', Person.prototype.printName());
 
 var P = new Person('umberto')
-console.log('NEW P = ', P.printName());
+console.log('NEW P = ', P.__proto__.printName());
 
 </script>
 </body>

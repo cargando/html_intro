@@ -122,7 +122,7 @@
 	<footer></footer> <!-- HTML5 для обозначения подвала -->
 	<main></main> <!-- HTML5 для уникального содержимого страницы -->
 <br><br>
-	<a href="http://ya.ru"><img src="/img/skate.jpg" height="50"></a>
+	<a href="http://ya.ru">iem <!--img src="/img/skate.jpg" height="50"--></a>
 	<a href="http://ya.ru" target="_blank">Ссылка на яндекс</a>
 	<br><br><br><br><br>&nbsp;
 	<script>
@@ -543,6 +543,7 @@
 		// 	}
 		// 	fn.counter = 0;
 		// 	fn.params = new Set();
+    //   arguments[0](fn);
 		// }
 		//
 		// const watch = withWatch(doSomeAction);
@@ -582,7 +583,7 @@
 		// console.log("Main: one");
 		// setTimeout(() => {
 		// 	console.log("Task #1: setTimeout 50 ms, from Main");
-		// }, 51);
+		// }, 50);
 		//
 		// const pp2 = new Promise((go, suck) => {
 		// 	console.log("Main: two (Promise executor)");
@@ -614,7 +615,7 @@
 		// console.log("Main: three");
 
 		// console.log("// --------------");
-
+		//
 		// console.log("Main: one");
 		//
 		// setTimeout(() => {
@@ -629,44 +630,232 @@
 		//
 		// console.log("Main: three");
 		//
-		// // console.log("// --------------");
+		// console.log("// --------------");
 		//
 		// String.prototype.duplicate = function () { // !!! NOT () => {}
-		// 	return this + this;
+    //   console.log("inside prototype" + this.toString());
+		//   return this.toString() + this.toString(); // this NOT return base string value
 		// };
+		// const v5 = "some val -".duplicate()
+		// console.log(v5);
 		//
-		// console.log("some val -".duplicate());
-
 		// console.log("// --------------");
 
-		// про реакт Ref и возможность управлять ребенком через реф (вызывать стейт и пр)
+		/// про реакт Ref и возможность управлять ребенком через реф (вызывать стейт и пр)
+		// ------------------
 
 		// задача
 		// console.log(5[x => x +1] => через прокси вывести 5,4,3,2,1
-		Number.prototype.__proto__ = new Proxy(Number, {
-			get(target, key, receiver) {
-				let value = Reflect.get(...arguments);
-				console.log("PROXY keys =", Object.getOwnPropertyNames(target), Object.getOwnPropertyNames(target).filter(vl => vl === key).length);
-				console.log("PROXY target=", target, "key=", key, "type", typeof eval(key), "value=", value);
-				if (typeof eval(key) === "function") {
-					console.log("PROXY > got function");
-					return receiver;
-				}
-				return Reflect.get(target, key, receiver);
-			}
-		});
-
-		let nn = 6;
-		const ob1 = {t: 10};
-		const ob2 = Object.create(ob1);
-		console.log("Main:: n = ", Number.name);
-		console.log("Main:: ob2 = ", ob2);
+		// Number.prototype.__proto__ = new Proxy(Number, {
+		// 	get(target, key, receiver) {
+		// 		let value = Reflect.get(...arguments);
+		// 		console.log("PROXY keys =", Object.getOwnPropertyNames(target), Object.getOwnPropertyNames(target).filter(vl => vl === key).length);
+		// 		console.log("PROXY target=", target, "key=", key, "type", typeof eval(key), "value=", value);
+		// 		if (typeof eval(key) === "function") {
+		// 			console.log("PROXY > got function");
+		// 			return receiver;
+		// 		}
+		// 		return Reflect.get(target, key, receiver);
+		// 	}
+		// });
+		//
+		// let nn = 6;
+		// const ob1 = {t: 10};
+		// const ob2 = Object.create(ob1);
+		// console.log("Main:: n = ", Number.name);
+		// console.log("Main:: ob2 = ", ob2);
 
 		// задача
 		// [[]][0]++ -> работает
 		// []++ не работает
 
 		// из массива объектов сделать запрос, например марка машины с номером и пробегом, через прокси сделать запрос ms["Fiat"] и он тебе возвращает все список всех фиатов
+
+		async function getBatmanMovies() {
+
+      const data = fetch(`https://api.tvmaze.com/search/shows?q=Batman`);
+
+      data.then(response => (response.json()))
+				.then(data => {
+				  console.log("Fetch THEN Result: ", data);
+      //    return data;
+				});
+      return data;
+		};
+
+		function printRes () {
+		  // const getBatmanMoviesRes = getBatmanMovies();
+
+
+      getBatmanMovies().then((res) => {
+        console.log(">>> FINAL THEN result: ", JSON.parse(JSON.stringify(res)));
+			}).then((d) => {
+        console.log(">>> FINALE: ");
+			})
+      // console.log(">>> printRes::getBatmanMooviesRes = ", getBatmanMoviesRes);
+
+		}
+
+    // printRes();
+
+    // console.log("// --------------");
+
+		// const TS = {
+		//   group: 50,
+		// 	gender: 7,
+		// }
+		//
+		// if (({
+		// 	[TS.group]: true,
+		// 	[TS.gender]: true,
+		// })[7]) {
+		//   console.log(">> Inside");
+		// } else {
+    //   console.log(">> NOT Inside");
+		// }
+
+		// console.log("// --------------");
+
+		class Shape1 {
+			constructor(name) {
+			}
+		}
+		class Circle1 extends Shape1 {
+			constructor(radius) {
+				super('Circle');
+				// this.radius = radius;
+			}
+
+			get radius() {
+				return this.radius;
+			}
+			set radius(radius) {
+				this.radius = radius;
+			}
+
+		}
+
+		const q1 = new Circle1(5);
+
+		// console.log(">> q1", q1)
+	/*/
+    (function() {
+      var a = b = 9;
+    })();
+
+    console.log(b);
+
+
+    var x, { x: y = 1 } = { x };
+    console.log( y );
+
+
+    const person = {
+      name: 'Семеныч',
+      age: 100,
+      work: { job: 'Blogger' }
+    };
+    const { work, work: { job } } = person;
+
+
+    var a = 100;
+    a();
+    function a() {
+      console.log('Hello from func A');
+    }
+    // var a = 100;
+    a();
+
+
+    for(var k = 0; k < 10; k ++) {
+      setTimeout( ( ) => console.log("k=", k), 100);
+    }
+
+
+    const p = new Promise(...);
+    p.then(...).then(...).catch(...).then(...);
+
+
+    const fn1 = p1 => p2 => p2 ? fn1(p1 + p2) : p1;
+    console.log("res = ", fn1("1")(2));
+
+
+
+    console.log((function (x, f = () => x ){
+      var x;
+      var y = x;
+      x = 2;
+      return [x, y, f() ];
+    })(1));
+
+
+    let foo = {};
+    let bar = foo;
+    foo.uno = 100;
+    foo.dos = foo = {extra: 10};
+    console.log("foo = ", foo, "bar = ", bar);
+   // */
+
+    // Внучку –> ['внучка', 'внучок', ...]
+    // Машу –> ['маша', 'махать', 'машу', ...]
+    // ...
+
+    const allSentences = (arr) => {
+      const len1 = arr.length;
+      const msActiveCnt = new Array(len1).fill(0);
+
+      const printRes = () => {
+        let res = '';
+        for(let i = 0; i < len1; i++) {
+          	let j = msActiveCnt[i];
+            if (j < 0) {
+              return undefined;
+						}
+          	res += (res.length ? ' ' : '') + arr[i][j];
+        }
+        return res;
+			}
+
+      function updateIndex(index) {
+        if (index < 0 || index >= len1) {
+          return false;
+				}
+        if (msActiveCnt[index] == arr[index].length - 1) {
+          msActiveCnt[index] = !!index ? 0 : -1;
+          return updateIndex(index - 1)
+        } else {
+          msActiveCnt[index] = msActiveCnt[index] + 1
+				}
+        return true;
+			}
+
+      return () => {
+        let res = printRes();
+        let r = updateIndex(len1 - 1);
+
+				return res;
+      }
+    }
+
+    const nextSentence = allSentences([
+      ['внучка'],
+      ['маша', 'махать', 'кашу'],
+			['репка', 'груша', 'горошек', 'макарошки'],
+      ['гибрид', 'монограмма']
+    ]);
+
+    let words = '';
+		while(words = nextSentence()) {
+      console.log(words);
+		}
+    // console.log(nextSentence());
+
+    // nextSentence(); // 'внучка маша маша1'
+    // nextSentence(); // 'внучка махать'
+    // // ... и т. д. все комбинации
+    // nextSentence(); // undefined
+
+
 	</script>
 
 </body>
