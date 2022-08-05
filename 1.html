@@ -789,12 +789,13 @@
     })(1));
 
 
+   // */
+
     let foo = {};
     let bar = foo;
     foo.uno = 100;
     foo.dos = foo = {extra: 10};
     console.log("foo = ", foo, "bar = ", bar);
-   // */
 
     // Внучку –> ['внучка', 'внучок', ...]
     // Машу –> ['маша', 'махать', 'машу', ...]
@@ -815,7 +816,7 @@
         }
         return res;
 			}
-
+ // a
       function updateIndex(index) {
         if (index < 0 || index >= len1) {
           return false;
